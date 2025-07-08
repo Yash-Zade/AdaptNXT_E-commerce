@@ -27,7 +27,6 @@ A basic E-commerce REST API built using **Java (Spring Boot)** for managing prod
 * Spring Boot
 * JWT (Spring Security)
 * MySQL
-* Docker
 * Swagger (OpenAPI)
 
 ---
