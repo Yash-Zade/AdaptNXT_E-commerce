@@ -1,16 +1,15 @@
-
 # 🛒 Simple E-commerce API
 
-A basic E-commerce REST API built using **Java (Spring Boot)** for managing products, cart, and orders with role-based authentication.
+A simple RESTful E-commerce backend built using **Java (Spring Boot)** to manage products, cart, and orders with role-based JWT authentication.
 
 ---
 
 ## ✅ Features
 
-* User roles: `Customer` and `Admin` (secured with JWT)
-* Product listing with pagination and search
-* Cart management (add, update, remove)
-* Place orders from cart
+* JWT-based authentication (`Customer` and `Admin` roles)
+* Product listing with **pagination** and **search**
+* Add/update/remove items from **cart**
+* Place orders from **cart**
 * Admin can manage products (add, update, delete)
 
 ---
@@ -25,25 +24,56 @@ A basic E-commerce REST API built using **Java (Spring Boot)** for managing prod
 
 * Java 21
 * Spring Boot
-* JWT (Spring Security)
-* MySQL
+* Spring Security (JWT)
+* PostgreSQL
+* Maven
 * Swagger (OpenAPI)
 
 ---
 
-## ⚙️ Run with Docker
+## ▶️ How to Run Locally
+
+### 1. Clone the repository
 
 ```bash
-docker build -t yashzade/ecommerce-api .
-docker run -p 8080:8080 yashzade/ecommerce-api
+git clone https://github.com/Yash-Zade/ecommerce-api.git
+cd ecommerce-api
 ```
 
+### 2. Configure `application.properties`
+
+Open `src/main/resources/application.properties` and update the following:
+
+```properties
+# Database Config
+spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+
+# JWT Secret
+jwt.secret=your_jwt_secret_key
+```
+
+> ✅ Ensure PostgreSQL is running and the `ecommerce` database is created.
+
+### 3. Run the application
+
+```bash
+./mvnw spring-boot:run
+```
+
+Or, if Maven is installed:
+
+```bash
+mvn spring-boot:run
+```
+
+---
 
 ## 🙋‍♂️ Author
 
 **Yash Zade**
-[(https://github.com/Yash-Zade)](https://github.com/Yash-Zade)
+🔗 [https://github.com/Yash-Zade](https://github.com/Yash-Zade)
 
 ---
-
-Let me know if you want to include credentials for testing (like a default admin user).
