@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-class OrderDTO {
+public class OrderDTO {
     private Long id;
     private User user;
     private LocalDateTime createdAt;

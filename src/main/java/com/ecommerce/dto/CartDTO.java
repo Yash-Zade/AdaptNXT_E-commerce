@@ -5,7 +5,7 @@ import com.ecommerce.entity.User;
 import lombok.Data;
 
 @Data
-public class CartItemDTO {
+public class CartDTO {
     private Long id;
     private User user;
     private Product product;
