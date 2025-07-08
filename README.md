@@ -1,6 +1,3 @@
-Sure! Here's a **minimal and clean** version of the README — perfect for internship assignment submission:
-
----
 
 # 🛒 Simple E-commerce API
 
